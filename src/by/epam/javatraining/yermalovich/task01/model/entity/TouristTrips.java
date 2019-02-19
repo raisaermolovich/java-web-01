@@ -18,13 +18,13 @@ public class TouristTrips {
         totalOffers++;
     }
 
-    public TouristTrips () {
+    public TouristTrips() {
         days = 0;
         transport = Transport.NO_TRANSPORT;
         meals = Meals.NO_MEAL;
     }
 
-    public TouristTrips (int days, Transport transport, Meals meals) {
+    public TouristTrips(int days, Transport transport, Meals meals) {
         this.days = days;
         this.transport = transport;
         this.meals = meals;

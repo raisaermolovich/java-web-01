@@ -5,18 +5,18 @@ import java.util.Objects;
 public class Vacation extends TouristTrips {
     private String destination;
 
-    public Vacation () {
+    public Vacation() {
         super();
         destination = "Not specified.";
     }
 
-    public Vacation (String destination) {
+    public Vacation(String destination) {
         super();
         this.destination = destination;
     }
 
-    public Vacation (int days, Transport transport, Meals meals, String destination) {
-        super (days, transport, meals);
+    public Vacation(int days, Transport transport, Meals meals, String destination) {
+        super(days, transport, meals);
         this.destination = destination;
     }
 

@@ -6,15 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class OffersList implements ActualOffers {
+public class OffersListI implements IActualOffers {
 
     private List<TouristTrips> list;
 
-    public OffersList () {
+    public OffersListI() {
         list = new ArrayList<>();
     }
 
-    public OffersList (List<TouristTrips> list) {
+    public OffersListI(List<TouristTrips> list) {
         this.list = list;
     }
 
@@ -30,11 +30,11 @@ public class OffersList implements ActualOffers {
         list.add(tour);
     }
 
-    public void removeTour (TouristTrips tour) {
+    public void removeTour(TouristTrips tour) {
         if (list.contains(tour)) list.remove(tour);
     }
 
-    public int numberOfTours () {
+    public int numberOfTours() {
         return (list.size());
     }
 
@@ -42,7 +42,7 @@ public class OffersList implements ActualOffers {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        OffersList that = (OffersList) o;
+        OffersListI that = (OffersListI) o;
         return Objects.equals(list, that.list);
     }
 
@@ -52,19 +52,11 @@ public class OffersList implements ActualOffers {
         return Objects.hash(list);
     }
 
-    /*
-    @Override
-    public String toString() {
-        return "OffersList{" +
-                "list=" + list +
-                '}';
-    }*/
-
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
 
-        builder.append("OffersList: \n");
+        builder.append("OffersListI: \n");
 
         for (TouristTrips t : list) {
             builder.append(t).append("\n");
