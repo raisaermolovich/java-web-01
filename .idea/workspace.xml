@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b905f115-a5cb-46c8-9f88-9926d3bd78f5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/controller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/container/ActualOffers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/container/IActualOffers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/container/OffersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/container/OffersListI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/Meals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/Meal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/TouristTrips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/TouristTrips.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/Vacation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/Vacation.java" afterDir="false" />
     </list>
@@ -21,7 +21,7 @@
       <file leaf-file-name="TouristTrips.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/TouristTrips.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="238">
               <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
             </state>
           </provider>
@@ -36,8 +36,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Meals.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/Meals.java">
+      <file leaf-file-name="Meal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/Meal.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
@@ -48,7 +48,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/controller/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="476">
               <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -87,21 +87,9 @@
       <file leaf-file-name="OffersListI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/container/OffersListI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-884">
+            <state relative-caret-position="85">
               <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
               <folding>
-                <element signature="e#333#334#0" expanded="true" />
-                <element signature="e#373#374#0" expanded="true" />
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#456#457#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#526#527#0" expanded="true" />
-                <element signature="e#578#579#0" expanded="true" />
-                <element signature="e#610#611#0" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#736#737#0" expanded="true" />
-                <element signature="e#794#795#0" expanded="true" />
                 <element signature="e#829#830#0" expanded="true" />
                 <element signature="e#865#866#0" expanded="true" />
               </folding>
@@ -112,20 +100,10 @@
       <file leaf-file-name="OffersArray.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/container/OffersArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="527">
               <caret line="42" column="45" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#497#498#0" expanded="true" />
-                <element signature="e#544#545#0" expanded="true" />
-                <element signature="e#586#587#0" expanded="true" />
-                <element signature="e#626#627#0" expanded="true" />
-                <element signature="e#654#655#0" expanded="true" />
-                <element signature="e#704#705#0" expanded="true" />
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#1466#1467#0" expanded="true" />
-                <element signature="e#1490#1491#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,7 +168,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -260,6 +237,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,12 +332,13 @@
       <option name="presentableId" value="Default" />
       <updated>1550418121486</updated>
       <workItem from="1550418125492" duration="15780000" />
-      <workItem from="1550605642342" duration="5249000" />
+      <workItem from="1550605642342" duration="6421000" />
+      <workItem from="1550639061129" duration="660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21029000" />
+    <option name="totallyTimeSpent" value="22861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="68" width="1374" height="688" extended-state="0" />
@@ -367,7 +346,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49924356" weight="0.3272727" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -379,9 +357,8 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.32838285" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31430745" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31887367" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32909092" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -393,6 +370,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32909092" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49924356" weight="0.3272727" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,6 +381,79 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/TouristTrips.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/Vacation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/Meal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/controller/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/container/IActualOffers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/util/creator/Creator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/container/OffersListI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <element signature="e#829#830#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/container/OffersArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/logic/Sorter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/TouristTrips.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -435,18 +487,6 @@
         <state relative-caret-position="272">
           <caret line="28" column="38" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="38" />
           <folding>
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
             <element signature="e#829#830#0" expanded="true" />
             <element signature="e#865#866#0" expanded="true" />
           </folding>
@@ -468,10 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="555" column="7" lean-forward="true" selection-start-line="555" selection-start-column="7" selection-end-line="555" selection-end-column="7" />
-          <folding>
-            <element signature="e#10225#10226#0" expanded="true" />
-            <element signature="e#10308#10309#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -484,7 +520,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/logic/Container.java" />
     <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/logic/SorterByDays.java" />
-    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/Meals.java">
+    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/Meal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
@@ -500,7 +536,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/controller/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="476">
           <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -517,21 +553,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/container/OffersListI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-884">
+        <state relative-caret-position="85">
           <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding>
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
             <element signature="e#829#830#0" expanded="true" />
             <element signature="e#865#866#0" expanded="true" />
           </folding>
@@ -545,36 +569,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/logic/Searcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/logic/Searcher.java" />
     <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/entity/TouristTrips.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="238">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/epam/javatraining/yermalovich/task01/model/container/OffersArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="527">
           <caret line="42" column="45" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#586#587#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -8,7 +8,7 @@ public class TouristTrips {
 
     private int days;
     private Transport transport;
-    private Meals meals;
+    private Meal meals;
 
     static {
         totalOffers = 0;
@@ -21,10 +21,10 @@ public class TouristTrips {
     public TouristTrips() {
         days = 0;
         transport = Transport.NO_TRANSPORT;
-        meals = Meals.NO_MEAL;
+        meals = Meal.NO_MEAL;
     }
 
-    public TouristTrips(int days, Transport transport, Meals meals) {
+    public TouristTrips(int days, Transport transport, Meal meals) {
         this.days = days;
         this.transport = transport;
         this.meals = meals;
@@ -46,11 +46,11 @@ public class TouristTrips {
         this.transport = transport;
     }
 
-    public Meals getMeals() {
+    public Meal getMeals() {
         return meals;
     }
 
-    public void setMeals(Meals meals) {
+    public void setMeals(Meal meals) {
         this.meals = meals;
     }
 

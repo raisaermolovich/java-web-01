@@ -1,6 +1,6 @@
 package by.epam.javatraining.yermalovich.task01.model.entity;
 
-public enum Meals {
+public enum Meal {
     NO_MEAL,
     ONE_TIME,
     TWO_TIMES,

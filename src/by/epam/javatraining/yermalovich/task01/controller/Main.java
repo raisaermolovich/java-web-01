@@ -9,7 +9,7 @@ public class Main {
 
         Vacation v1 = new Vacation();
         Vacation v2 = new Vacation("Greece");
-        Vacation v3 = new Vacation(10, Transport.BUS, Meals.ALL_INCLUSIVE, "Greece");
+        Vacation v3 = new Vacation(10, Transport.BUS, Meal.ALL_INCLUSIVE, "Greece");
 
         /*IActualOffers list = new OffersListI();
         list.addTour(v1);

@@ -15,7 +15,7 @@ public class Vacation extends TouristTrips {
         this.destination = destination;
     }
 
-    public Vacation(int days, Transport transport, Meals meals, String destination) {
+    public Vacation(int days, Transport transport, Meal meals, String destination) {
         super(days, transport, meals);
         this.destination = destination;
     }
