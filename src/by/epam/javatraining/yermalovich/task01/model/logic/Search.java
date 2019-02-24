@@ -1,0 +1,88 @@
+package by.epam.javatraining.yermalovich.task01.model.logic;
+
+import by.epam.javatraining.yermalovich.task01.model.container.ActualOffer;
+import by.epam.javatraining.yermalovich.task01.model.container.OffersArray;
+import by.epam.javatraining.yermalovich.task01.model.entity.Meal;
+import by.epam.javatraining.yermalovich.task01.model.entity.Transport;
+import by.epam.javatraining.yermalovich.task01.model.exception.*;
+
+public class Search {
+
+    public static ActualOffer searchByDays(ActualOffer list, int a, int b) throws InvalidParametersOrderException {
+        if (a > b) {
+            throw new InvalidParametersOrderException("Invalid number range");
+        }
+
+        ActualOffer foundList = new OffersArray();
+
+        try {
+            for (int i = 0; i < list.numberOfTours(); i++) {
+                if (list.get(i).getDays() >= a && list.get(i).getDays() <= b) {
+                    foundList.addTour(list.get(i));
+                }
+            }
+        } catch (IncorrectIndexException e) {
+            System.out.println(e.getMessage());
+        }
+        return foundList;
+    }
+
+    public static ActualOffer searchByTransport(ActualOffer list, Transport transport) {
+        ActualOffer foundList = new OffersArray();
+
+        try {
+            for (int i = 0; i < list.numberOfTours(); i++) {
+                if (list.get(i).getTransport().equals(transport)) {
+                    foundList.addTour(list.get(i));
+                }
+            }
+        } catch (IncorrectIndexException e) {
+            System.out.println(e.getMessage());
+        }
+        return foundList;
+    }
+
+    public static ActualOffer searchByMeal(ActualOffer list, Meal meals) {
+        ActualOffer foundList = new OffersArray();
+
+        try {
+            for (int i = 0; i < list.numberOfTours(); i++) {
+                if (list.get(i).getMeals().equals(meals)) {
+                    foundList.addTour(list.get(i));
+                }
+            }
+        } catch (IncorrectIndexException e) {
+            System.out.println(e.getMessage());
+        }
+        return foundList;
+    }
+
+    public static ActualOffer searchByDestination(ActualOffer list, String destination) {
+        ActualOffer foundList = new OffersArray();
+
+        try {
+            for (int i = 0; i < list.numberOfTours(); i++) {
+                if (list.get(i).getDestination().equals(destination)) {
+                    foundList.addTour(list.get(i));
+                }
+            }
+        } catch (IncorrectIndexException e) {
+            System.out.println(e.getMessage());
+        }
+        return foundList;
+    }
+
+    public static ActualOffer searchByAllParams(ActualOffer list, int a, int b, Transport transport, Meal meals,
+                                                String destination) {
+        ActualOffer foundList = new OffersArray();
+        try {
+            foundList = searchByDays(list, a, b);
+            foundList = searchByTransport(foundList, transport);
+            foundList = searchByMeal(foundList, meals);
+            foundList = searchByDestination(foundList, destination);
+        } catch (InvalidParametersOrderException e) {
+            System.out.println(e.getMessage());
+        }
+        return foundList;
+    }
+}
