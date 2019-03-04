@@ -2,7 +2,7 @@ package by.epam.javatraining.yermalovich.task01.model.container;
 
 import by.epam.javatraining.yermalovich.task01.model.entity.TouristTrip;
 import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectIndexException;
-import by.epam.javatraining.yermalovich.task01.model.util.comparator.TripComparator;
+import by.epam.javatraining.yermalovich.task01.model.comparator.TripComparator;
 
 import java.util.Arrays;
 import java.util.Objects;

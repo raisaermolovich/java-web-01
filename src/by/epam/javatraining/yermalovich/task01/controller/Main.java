@@ -1,11 +1,10 @@
 package by.epam.javatraining.yermalovich.task01.controller;
 
 import by.epam.javatraining.yermalovich.task01.model.container.ActualOffer;
-import by.epam.javatraining.yermalovich.task01.model.container.*;
 import by.epam.javatraining.yermalovich.task01.model.entity.*;
 import by.epam.javatraining.yermalovich.task01.model.logic.Search;
 import by.epam.javatraining.yermalovich.task01.model.logic.Sorter;
-import by.epam.javatraining.yermalovich.task01.model.util.creator.*;
+import by.epam.javatraining.yermalovich.task01.model.creator.*;
 
 public class Main {
     public static void main(String[] args) {

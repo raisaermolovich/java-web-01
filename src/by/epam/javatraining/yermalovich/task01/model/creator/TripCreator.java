@@ -1,4 +1,4 @@
-package by.epam.javatraining.yermalovich.task01.model.util.creator;
+package by.epam.javatraining.yermalovich.task01.model.creator;
 
 import by.epam.javatraining.yermalovich.task01.model.entity.*;
 

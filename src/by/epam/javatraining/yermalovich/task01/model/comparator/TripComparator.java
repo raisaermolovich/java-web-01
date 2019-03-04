@@ -4,7 +4,7 @@
  * Meals
  */
 
-package by.epam.javatraining.yermalovich.task01.model.util.comparator;
+package by.epam.javatraining.yermalovich.task01.model.comparator;
 
 import by.epam.javatraining.yermalovich.task01.model.entity.TouristTrip;
 
