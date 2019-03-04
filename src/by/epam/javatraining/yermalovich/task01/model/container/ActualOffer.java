@@ -1,7 +1,7 @@
 package by.epam.javatraining.yermalovich.task01.model.container;
 
 import by.epam.javatraining.yermalovich.task01.model.entity.TouristTrip;
-import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectIndexException;
+import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectArrayIndexException;
 
 
 public interface ActualOffer {
@@ -12,7 +12,7 @@ public interface ActualOffer {
 
     int numberOfTours();
 
-    TouristTrip get(int index) throws IncorrectIndexException;
+    TouristTrip get(int index) throws IncorrectArrayIndexException;
 
-    void add(int index, TouristTrip tour) throws IncorrectIndexException;
+    void add(int index, TouristTrip tour) throws IncorrectArrayIndexException;
 }

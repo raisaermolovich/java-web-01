@@ -1,7 +1,7 @@
 package by.epam.javatraining.yermalovich.task01.model.container;
 
 import by.epam.javatraining.yermalovich.task01.model.entity.TouristTrip;
-import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectIndexException;
+import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectArrayIndexException;
 import by.epam.javatraining.yermalovich.task01.model.comparator.TripComparator;
 
 import java.util.Arrays;
@@ -18,8 +18,13 @@ public class OffersArray implements ActualOffer {
     }
 
     public OffersArray(TouristTrip[] array) {
-        this.array = array;
-        lastIndex = array.length - 1;
+        if (array != null) {
+            this.array = array;
+            lastIndex = array.length - 1;
+        } else {
+            lastIndex = -1;
+            array = new TouristTrip[0];
+        }
     }
 
     public int getLastIndex() {
@@ -32,37 +37,39 @@ public class OffersArray implements ActualOffer {
 
     @Override
     public void addTour(TouristTrip tour) {
-
-        TouristTrip[] tmpArray = new TouristTrip[++lastIndex + 1];
-        for (int i = 0; i < array.length; i++) {
-            tmpArray[i] = array[i];
+        if (tour != null) {
+            TouristTrip[] tmpArray = new TouristTrip[++lastIndex + 1];
+            for (int i = 0; i < array.length; i++) {
+                tmpArray[i] = array[i];
+            }
+            tmpArray[lastIndex] = tour;
+            array = tmpArray;
         }
-        tmpArray[lastIndex] = tour;
-        array = tmpArray;
-
     }
 
     @Override
     public void removeTour(TouristTrip tour) {
-        TripComparator comparator = new TripComparator();
-        int matches = 0;
+        if (tour != null) {
+            TripComparator comparator = new TripComparator();
+            int matches = 0;
 
-        for (int i = 0; i < array.length; i++) {
-            if (comparator.compare(array[i], tour) == 0) {
-                matches++;
+            for (int i = 0; i < array.length; i++) {
+                if (comparator.compare(array[i], tour) == 0) {
+                    matches++;
+                }
             }
-        }
-        lastIndex -= matches;
+            lastIndex -= matches;
 
-        TouristTrip[] tmpArray = new TouristTrip[lastIndex + 1];
-        int j = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (comparator.compare(array[i], tour) == 0) {
-                continue;
+            TouristTrip[] tmpArray = new TouristTrip[lastIndex + 1];
+            int j = 0;
+            for (int i = 0; i < array.length; i++) {
+                if (comparator.compare(array[i], tour) == 0) {
+                    continue;
+                }
+                tmpArray[j++] = array[i];
             }
-            tmpArray[j++] = array[i];
+            array = tmpArray;
         }
-        array = tmpArray;
     }
 
     @Override
@@ -70,18 +77,18 @@ public class OffersArray implements ActualOffer {
         return lastIndex + 1;
     }
 
-    @Override  //TRY/CATCH
-    public TouristTrip get(int index) throws IncorrectIndexException {
+    @Override
+    public TouristTrip get(int index) throws IncorrectArrayIndexException {
         if (index > lastIndex || index < 0) {
-            throw new IncorrectIndexException("Index out of range.");
+            throw new IncorrectArrayIndexException("Index out of range.");
         }
         return array[index];
     }
 
-    @Override  //TRY/CATCH
-    public void add(int index, TouristTrip tour) throws IncorrectIndexException {
+    @Override
+    public void add(int index, TouristTrip tour) throws IncorrectArrayIndexException {
         if (index > lastIndex || index < 0) {
-            throw new IncorrectIndexException("Index out of range.");
+            throw new IncorrectArrayIndexException("Index out of range.");
         }
         array[index] = tour;
     }

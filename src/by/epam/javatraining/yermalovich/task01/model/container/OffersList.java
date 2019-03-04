@@ -1,7 +1,7 @@
 package by.epam.javatraining.yermalovich.task01.model.container;
 
 import by.epam.javatraining.yermalovich.task01.model.entity.TouristTrip;
-import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectIndexException;
+import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectArrayIndexException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,11 @@ public class OffersList implements ActualOffer {
     }
 
     public OffersList(List<TouristTrip> list) {
-        this.list = list;
+        if (list != null) {
+            this.list = list;
+        } else {
+            list = new ArrayList<>();
+        }
     }
 
     public List<TouristTrip> getList() {
@@ -24,17 +28,23 @@ public class OffersList implements ActualOffer {
     }
 
     public void setList(List<TouristTrip> list) {
-        this.list = list;
+        if (list != null) {
+            this.list = list;
+        }
     }
 
     @Override
     public void addTour(TouristTrip tour) {
-        list.add(tour);
+        if (tour != null) {
+            list.add(tour);
+        }
     }
 
     @Override
     public void removeTour(TouristTrip tour) {
-        if (list.contains(tour)) list.remove(tour);
+        if (tour != null && list.contains(tour)) {
+            list.remove(tour);
+        }
     }
 
     @Override
@@ -43,18 +53,18 @@ public class OffersList implements ActualOffer {
     }
 
     @Override
-    public TouristTrip get(int index) throws IncorrectIndexException {
+    public TouristTrip get(int index) throws IncorrectArrayIndexException {
         if (index >= list.size() || index < 0) {
-            throw new IncorrectIndexException("Index out of range.");
+            throw new IncorrectArrayIndexException("Index out of range.");
         }
         TouristTrip tour = list.get(index);
         return tour;
     }
 
-    @Override  //TRY/CATCH
-    public void add(int index, TouristTrip tour) throws IncorrectIndexException {
+    @Override
+    public void add(int index, TouristTrip tour) throws IncorrectArrayIndexException {
         if (index >= list.size() || index < 0) {
-            throw new IncorrectIndexException("Index out of range.");
+            throw new IncorrectArrayIndexException("Index out of range.");
         }
         list.add(index, tour);
     }
