@@ -10,4 +10,12 @@ public class TouristTripException extends Exception {
         super(message);
     }
 
+    public TouristTripException (Throwable cause) {
+        super(cause);
+    }
+
+    public TouristTripException (String message, Throwable cause) {
+        super(message, cause);
+    }
+
 }

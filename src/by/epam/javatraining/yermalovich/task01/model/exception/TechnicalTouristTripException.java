@@ -9,4 +9,12 @@ public class TechnicalTouristTripException extends TouristTripException {
     public TechnicalTouristTripException (String message) {
         super(message);
     }
+
+    public TechnicalTouristTripException (Throwable cause) {
+        super(cause);
+    }
+
+    public TechnicalTouristTripException (String message, Throwable cause) {
+        super(message, cause);
+    }
 }

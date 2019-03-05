@@ -5,7 +5,8 @@ public class InvalidSearchParametersOrderException extends LogicalTouristTripExc
     public InvalidSearchParametersOrderException() {
         super();
     }
-        public InvalidSearchParametersOrderException(String message) {
+
+    public InvalidSearchParametersOrderException(String message) {
         super(message);
     }
 }
