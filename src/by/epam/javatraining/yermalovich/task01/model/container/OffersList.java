@@ -24,7 +24,7 @@ public class OffersList implements ActualOffer {
     }
 
     public List<TouristTrip> getList() {
-        return list;
+        return list; //WRONG
     }
 
     public void setList(List<TouristTrip> list) {
@@ -54,7 +54,7 @@ public class OffersList implements ActualOffer {
 
     @Override
     public TouristTrip get(int index) throws IncorrectArrayIndexException {
-        if (index >= list.size() || index < 0) {
+        if (index >= list.size() || index < 0 || index >= list.size()) {
             throw new IncorrectArrayIndexException("Index out of range.");
         }
         TouristTrip tour = list.get(index);
@@ -63,7 +63,7 @@ public class OffersList implements ActualOffer {
 
     @Override
     public void add(int index, TouristTrip tour) throws IncorrectArrayIndexException {
-        if (index >= list.size() || index < 0) {
+        if (index >= list.size() || index < 0 || index >= list.size()) {
             throw new IncorrectArrayIndexException("Index out of range.");
         }
         list.add(index, tour);

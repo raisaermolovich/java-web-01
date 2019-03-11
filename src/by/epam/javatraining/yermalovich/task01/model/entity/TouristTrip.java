@@ -4,8 +4,6 @@ import java.util.Objects;
 
 public class TouristTrip {
 
-    public static int totalOffers; //Should be public?
-
     private int days;
     private Transport transport;
     private Meal meals;
@@ -19,10 +17,26 @@ public class TouristTrip {
     }
 
     public TouristTrip(int days, Transport transport, Meal meals, String destination) {
-        this.days = days;
+        this.days = 0;
+        if (days > 0) {
+            this.days = days;
+        }
         this.transport = transport;
         this.meals = meals;
-        this.destination = destination;
+        this.destination = "Not specified.";
+        if (destination != null) {
+            this.destination = destination;
+        }
+    }
+
+    public TouristTrip (TouristTrip another) {
+        this();
+        if (another != null) {
+            this.days = another.getDays();
+            this.transport = another.getTransport();
+            this.meals = another.getMeals();
+            this.destination = another.getDestination();
+        }
     }
 
     public int getDays() {
@@ -30,7 +44,9 @@ public class TouristTrip {
     }
 
     public void setDays(int days) {
-        this.days = days;
+        if (days > 0) {
+            this.days = days;
+        }
     }
 
     public Transport getTransport() {
@@ -54,7 +70,9 @@ public class TouristTrip {
     }
 
     public void setDestination(String destination) {
-        this.destination = destination;
+        if (destination != null) {
+            this.destination = destination;
+        }
     }
 
     @Override

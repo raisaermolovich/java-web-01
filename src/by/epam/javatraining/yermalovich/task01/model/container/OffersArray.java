@@ -32,7 +32,13 @@ public class OffersArray implements ActualOffer {
     }
 
     public TouristTrip[] getArray() {
-        return array;
+        return array; //WRONG
+    }
+
+    public void setArray(TouristTrip[] array) {
+        if (array != null) {
+            this.array = array;
+        }
     }
 
     @Override

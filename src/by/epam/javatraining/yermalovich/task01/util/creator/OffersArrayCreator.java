@@ -1,4 +1,4 @@
-package by.epam.javatraining.yermalovich.task01.model.creator;
+package by.epam.javatraining.yermalovich.task01.util.creator;
 
 import by.epam.javatraining.yermalovich.task01.model.container.ActualOffer;
 import by.epam.javatraining.yermalovich.task01.model.container.OffersArray;
@@ -11,7 +11,7 @@ public class OffersArrayCreator implements ContainerCreator {
     }
 
     public ActualOffer createContainer(TouristTrip[] array){
-        return new OffersArray(array);
+            return new OffersArray(array);
     }
 
     @Override

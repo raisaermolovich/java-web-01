@@ -18,12 +18,18 @@ public class Vacation extends TouristTrip {
         super(days, transport, meals, destination);
     }
 
+    public Vacation (TouristTrip another) {
+        super(another);
+    }
+
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String destination) {
-        this.description = description;
+        if (description != null) {
+            this.description = description;
+        }
     }
 
     @Override

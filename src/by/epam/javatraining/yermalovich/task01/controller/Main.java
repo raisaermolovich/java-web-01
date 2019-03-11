@@ -4,7 +4,7 @@ import by.epam.javatraining.yermalovich.task01.model.container.ActualOffer;
 import by.epam.javatraining.yermalovich.task01.model.entity.*;
 import by.epam.javatraining.yermalovich.task01.model.logic.Search;
 import by.epam.javatraining.yermalovich.task01.model.logic.Sorter;
-import by.epam.javatraining.yermalovich.task01.model.creator.*;
+import by.epam.javatraining.yermalovich.task01.util.creator.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +16,8 @@ public class Main {
         TouristTrip v3 = vacation.createTrip(20, Transport.TRAIN, Meal.ONE_TIME, "France");
         TouristTrip v4 = vacation.createTrip(15, Transport.PLANE, Meal.TWO_TIMES, "Spain");
         TouristTrip v5 = vacation.createTrip(10, Transport.TRAIN, Meal.TWO_TIMES, "Spain");
+
+        TouristTrip v6 = vacation.createTrip(v5);
 
         //OffersList CHECK
         /*ActualOffer list = new OffersList();
@@ -40,6 +42,7 @@ public class Main {
         list.addTour(v3);
         list.addTour(v4);
         list.addTour(v5);
+        list.addTour(v6);
         System.out.println(list.toString());
 
         list.removeTour(v4);
@@ -66,5 +69,13 @@ public class Main {
                 "Greece");
         System.out.println("Found by ALL: " + foundList3);
         System.out.println(foundList3.numberOfTours());
+
+        try {
+            ActualOffer foundList4 = Search.searchByDays(list, -1, -2);
+            System.out.println("Found by -1: " + foundList4);
+            System.out.println(foundList3.numberOfTours());
+        } catch (Exception e){
+            System.out.println(e);
+        }
     }
 }
