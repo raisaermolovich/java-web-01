@@ -24,6 +24,8 @@ public class Search {
                 }
             } catch (IncorrectArrayIndexException e) {
                 System.out.println(e.getMessage());
+            } catch (ArrayOverflowException e) {
+                System.out.println(e.getMessage());
             }
         }
         return foundList;
@@ -40,6 +42,8 @@ public class Search {
                     }
                 }
             } catch (IncorrectArrayIndexException e) {
+                System.out.println(e.getMessage());
+            } catch (ArrayOverflowException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -58,6 +62,8 @@ public class Search {
                 }
             } catch (IncorrectArrayIndexException e) {
                 System.out.println(e.getMessage());
+            } catch (ArrayOverflowException e) {
+                System.out.println(e.getMessage());
             }
         }
         return foundList;
@@ -74,6 +80,8 @@ public class Search {
                     }
                 }
             } catch (IncorrectArrayIndexException e) {
+                System.out.println(e.getMessage());
+            } catch (ArrayOverflowException e) {
                 System.out.println(e.getMessage());
             }
         }

@@ -66,7 +66,9 @@ public class OffersList implements ActualOffer {
         if (index >= list.size() || index < 0 || index >= list.size()) {
             throw new IncorrectArrayIndexException("Index out of range.");
         }
-        list.add(index, tour);
+        if (tour != null) {
+            list.add(index, tour);
+        }
     }
 
     @Override

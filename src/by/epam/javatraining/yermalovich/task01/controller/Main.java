@@ -17,7 +17,7 @@ public class Main {
         TouristTrip v4 = vacation.createTrip(15, Transport.PLANE, Meal.TWO_TIMES, "Spain");
         TouristTrip v5 = vacation.createTrip(10, Transport.TRAIN, Meal.TWO_TIMES, "Spain");
 
-        TouristTrip v6 = vacation.createTrip(v5);
+        TouristTrip v6 = vacation.createTrip(v2);
 
         //OffersList CHECK
         /*ActualOffer list = new OffersList();
@@ -35,15 +35,19 @@ public class Main {
         //OffersArray CHECK
 
         //ActualOffer list = new OffersArray();
-        OffersArrayCreator arrayCreator = new OffersArrayCreator();
-        ActualOffer list = arrayCreator.createContainer();
-        list.addTour(v1);
-        list.addTour(v2);
-        list.addTour(v3);
-        list.addTour(v4);
-        list.addTour(v5);
-        list.addTour(v6);
-        System.out.println(list.toString());
+        OffersArrayStaticCreator arrayCreator = new OffersArrayStaticCreator();
+        ActualOffer list = arrayCreator.createContainer(7);
+        try {
+            list.addTour(v1);
+            list.addTour(v2);
+            list.addTour(v3);
+            list.addTour(v4);
+            list.addTour(v5);
+            list.addTour(v6);
+            System.out.println(list.toString());
+        } catch (Exception e) {
+            System.out.println("Exceed array.");
+        }
 
         list.removeTour(v4);
         System.out.println(list.toString());
@@ -74,8 +78,10 @@ public class Main {
             ActualOffer foundList4 = Search.searchByDays(list, -1, -2);
             System.out.println("Found by -1: " + foundList4);
             System.out.println(foundList3.numberOfTours());
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e);
         }
+
+
     }
 }
