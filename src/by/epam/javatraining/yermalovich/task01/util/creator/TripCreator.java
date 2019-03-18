@@ -7,5 +7,5 @@ public interface TripCreator {
 
     TouristTrip createTrip(int days, Transport transport, Meal meals, String destination);
 
-    TouristTrip createTrip(TouristTrip another);
+    //TouristTrip createTrip(TouristTrip another);
 }

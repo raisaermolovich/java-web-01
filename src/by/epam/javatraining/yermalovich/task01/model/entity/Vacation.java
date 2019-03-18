@@ -2,7 +2,7 @@ package by.epam.javatraining.yermalovich.task01.model.entity;
 
 import java.util.Objects;
 
-public class Vacation extends TouristTrip {
+public class Vacation extends IndividualTrip {
 
     private String description;
 
@@ -18,7 +18,7 @@ public class Vacation extends TouristTrip {
         super(days, transport, meals, destination);
     }
 
-    public Vacation (TouristTrip another) {
+    public Vacation (Vacation another) {
         super(another);
     }
 
@@ -50,10 +50,7 @@ public class Vacation extends TouristTrip {
     @Override
     public String toString() {
         return "Vacation{" +
-                "days=" + getDays() +
-                ", transport=" + getTransport() +
-                ", meals=" + getMeals() +
-                ", destination=" + getDestination() +
+                super.toString() +
                 ", description=" + getDescription() +
                 '}';
     }

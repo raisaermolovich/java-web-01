@@ -94,11 +94,9 @@ public class TouristTrip {
 
     @Override
     public String toString() {
-        return "TouristTrip{" +
-                "days=" + days +
+        return  "days=" + days +
                 ", transport=" + transport +
                 ", meals=" + meals +
-                ", destination=" + destination +
-                '}';
+                ", destination=" + destination;
     }
 }

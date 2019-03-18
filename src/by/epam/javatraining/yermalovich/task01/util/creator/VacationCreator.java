@@ -14,8 +14,8 @@ public class VacationCreator implements TripCreator {
         return new Vacation(days, transport, meals, destination);
     }
 
-    @Override
-    public TouristTrip createTrip(TouristTrip another) {
+    //@Override
+    public TouristTrip createTrip(Vacation another) {
         return new Vacation(another);
     }
 

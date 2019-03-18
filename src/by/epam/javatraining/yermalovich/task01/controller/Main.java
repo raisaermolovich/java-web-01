@@ -17,9 +17,8 @@ public class Main {
         TouristTrip v4 = vacation.createTrip(15, Transport.PLANE, Meal.TWO_TIMES, "Spain");
         TouristTrip v5 = vacation.createTrip(10, Transport.TRAIN, Meal.TWO_TIMES, "Spain");
 
-        TouristTrip v6 = vacation.createTrip(v2);
 
-        //OffersList CHECK
+                //OffersList CHECK
         /*ActualOffer list = new OffersList();
         list.addTour(v1);
         list.addTour(v2);
@@ -43,7 +42,6 @@ public class Main {
             list.addTour(v3);
             list.addTour(v4);
             list.addTour(v5);
-            list.addTour(v6);
             System.out.println(list.toString());
         } catch (Exception e) {
             System.out.println("Exceed array.");
