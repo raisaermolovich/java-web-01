@@ -7,13 +7,19 @@ import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectArrayInd
 
 public interface ActualOffer {
 
+    TouristTrip[] getArray();
+
+    void setArray(TouristTrip[] array);
+
     void addTour(TouristTrip tour) throws ArrayOverflowException;
 
     void removeTour(TouristTrip tour);
 
-    int numberOfTours();
+    void add(int index, TouristTrip tour)throws IncorrectArrayIndexException;
 
     TouristTrip get(int index) throws IncorrectArrayIndexException;
 
-    void add(int index, TouristTrip tour)throws IncorrectArrayIndexException;
+    int size();
+
+    boolean isEmpty();
 }

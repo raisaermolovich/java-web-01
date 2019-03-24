@@ -1,5 +1,6 @@
-package by.epam.javatraining.yermalovich.task01.model.container;
+package extraclasses;
 
+import by.epam.javatraining.yermalovich.task01.model.container.ActualOffer;
 import by.epam.javatraining.yermalovich.task01.model.entity.TouristTrip;
 import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectArrayIndexException;
 
@@ -7,7 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class OffersList implements ActualOffer {
+//public class OffersList implements ActualOffer {
+public class OffersList{
 
     private List<TouristTrip> list;
 
@@ -33,26 +35,26 @@ public class OffersList implements ActualOffer {
         }
     }
 
-    @Override
+    //@Override
     public void addTour(TouristTrip tour) {
         if (tour != null) {
             list.add(tour);
         }
     }
 
-    @Override
+    //@Override
     public void removeTour(TouristTrip tour) {
         if (tour != null && list.contains(tour)) {
             list.remove(tour);
         }
     }
 
-    @Override
-    public int numberOfTours() {
+    //@Override
+    public int size() {
         return (list.size());
     }
 
-    @Override
+    //@Override
     public TouristTrip get(int index) throws IncorrectArrayIndexException {
         if (index >= list.size() || index < 0 || index >= list.size()) {
             throw new IncorrectArrayIndexException("Index out of range.");
@@ -61,7 +63,7 @@ public class OffersList implements ActualOffer {
         return tour;
     }
 
-    @Override
+    //@Override
     public void add(int index, TouristTrip tour) throws IncorrectArrayIndexException {
         if (index >= list.size() || index < 0 || index >= list.size()) {
             throw new IncorrectArrayIndexException("Index out of range.");
@@ -71,7 +73,7 @@ public class OffersList implements ActualOffer {
         }
     }
 
-    @Override
+    //@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -79,13 +81,13 @@ public class OffersList implements ActualOffer {
         return Objects.equals(list, that.list);
     }
 
-    @Override
+    //@Override
     public int hashCode() {
 
         return Objects.hash(list);
     }
 
-    @Override
+    //@Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
 
@@ -95,5 +97,10 @@ public class OffersList implements ActualOffer {
             builder.append(t).append("\n");
         }
         return builder + "";
+    }
+
+    //@Override
+    public boolean isEmpty(){
+        return true; //TO CHANGE
     }
 }

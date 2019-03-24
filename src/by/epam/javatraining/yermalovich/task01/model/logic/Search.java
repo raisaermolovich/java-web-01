@@ -17,7 +17,7 @@ public class Search {
         ActualOffer foundList = new OffersArray();
         if (list != null) {
             try {
-                for (int i = 0; i < list.numberOfTours(); i++) {
+                for (int i = 0; i < list.size(); i++) {
                     if (list.get(i).getDays() >= a && list.get(i).getDays() <= b) {
                         foundList.addTour(list.get(i));
                     }
@@ -36,7 +36,7 @@ public class Search {
 
         if (list != null) {
             try {
-                for (int i = 0; i < list.numberOfTours(); i++) {
+                for (int i = 0; i < list.size(); i++) {
                     if (list.get(i).getTransport().equals(transport)) {
                         foundList.addTour(list.get(i));
                     }
@@ -55,7 +55,7 @@ public class Search {
 
         if (list != null) {
             try {
-                for (int i = 0; i < list.numberOfTours(); i++) {
+                for (int i = 0; i < list.size(); i++) {
                     if (list.get(i).getMeals().equals(meals)) {
                         foundList.addTour(list.get(i));
                     }
@@ -74,7 +74,7 @@ public class Search {
 
         if (list != null) {
             try {
-                for (int i = 0; i < list.numberOfTours(); i++) {
+                for (int i = 0; i < list.size(); i++) {
                     if (list.get(i).getDestination().equals(destination)) {
                         foundList.addTour(list.get(i));
                     }

@@ -27,17 +27,27 @@ public class OffersArray implements ActualOffer {
         }
     }
 
+    public OffersArray(ActualOffer another) {
+        if (another != null) {
+            lastIndex = another.getArray().length - 1;
+            array = Arrays.copyOf(another.getArray(), another.getArray().length);
+        }
+    }
+
     public int getLastIndex() {
         return lastIndex;
     }
 
+    @Override
     public TouristTrip[] getArray() {
-        return array; //WRONG
+        return array;
     }
 
-    public void setArray(TouristTrip[] array) {
+    @Override
+    public void setArray (TouristTrip[] array) {
         if (array != null) {
             this.array = array;
+            lastIndex = array.length - 1;
         }
     }
 
@@ -79,8 +89,18 @@ public class OffersArray implements ActualOffer {
     }
 
     @Override
-    public int numberOfTours() {
+    public int size() {
         return lastIndex + 1;
+    }
+
+    @Override
+    public void add(int index, TouristTrip tour) throws IncorrectArrayIndexException {
+        if (index > lastIndex || index < 0) {
+            throw new IncorrectArrayIndexException("Index out of range.");
+        }
+        if (tour != null) {
+            array[index] = tour;
+        }
     }
 
     @Override
@@ -92,13 +112,8 @@ public class OffersArray implements ActualOffer {
     }
 
     @Override
-    public void add(int index, TouristTrip tour) throws IncorrectArrayIndexException {
-        if (index > lastIndex || index < 0) {
-            throw new IncorrectArrayIndexException("Index out of range.");
-        }
-        if (tour != null) {
-            array[index] = tour;
-        }
+    public boolean isEmpty() {
+        return (lastIndex == -1);
     }
 
     @Override

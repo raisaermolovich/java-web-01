@@ -6,20 +6,24 @@ public class Vacation extends IndividualTrip {
 
     private String description;
 
-    {
-        description = "No description";
-    }
-
     public Vacation() {
         super();
+        description = "No description";
     }
 
     public Vacation(int days, Transport transport, Meal meals, String destination) {
         super(days, transport, meals, destination);
     }
 
+
+    public Vacation(int days, Transport transport, Meal meals, String destination, String description) {
+        super(days, transport, meals, destination);
+        this.description = description;
+    }
+
     public Vacation (Vacation another) {
         super(another);
+        this.description = another.description;
     }
 
     public String getDescription() {

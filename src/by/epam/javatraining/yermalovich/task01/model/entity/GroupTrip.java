@@ -36,7 +36,7 @@ public class GroupTrip extends TouristTrip {
     }
 
     public void setMinNumberOfPeople(int minNumberOfPeople) throws IncorrectMinNumberOfPeople {
-        if (minNumberOfPeople > 0) {
+        if (minNumberOfPeople > 0 && minNumberOfPeople <= maxNumberOfPeople) {
             this.minNumberOfPeople = minNumberOfPeople;
         } else {
             throw new IncorrectMinNumberOfPeople();

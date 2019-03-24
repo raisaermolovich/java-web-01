@@ -11,8 +11,8 @@ public class Sorter {
 
         if (list != null) {
             try {
-                for (int j = 0; j < list.numberOfTours() - 1; j++) {
-                    for (int i = 0; i < list.numberOfTours() - 1; i++) {
+                for (int j = 0; j < list.size() - 1; j++) {
+                    for (int i = 0; i < list.size() - 1; i++) {
                         if (list.get(i).getDays() > list.get(i + 1).getDays()) {
                             tmp = list.get(i);
                             list.add(i, list.get(i + 1));
@@ -21,7 +21,7 @@ public class Sorter {
                     }
                 }
             } catch (IncorrectArrayIndexException e) {
-                System.out.println(e.getMessage());
+                System.out.println(e.getMessage()); //REMOVE
             }
         }
         return list;
@@ -32,8 +32,8 @@ public class Sorter {
 
         if (list != null) {
             try {
-                for (int j = 0; j < list.numberOfTours() - 1; j++) {
-                    for (int i = 0; i < list.numberOfTours() - 1; i++) {
+                for (int j = 0; j < list.size() - 1; j++) {
+                    for (int i = 0; i < list.size() - 1; i++) {
                         if (list.get(i).getDays() < list.get(i + 1).getDays()) {
                             tmp = list.get(i);
                             list.add(i, list.get(i + 1));
@@ -42,7 +42,7 @@ public class Sorter {
                     }
                 }
             } catch (IncorrectArrayIndexException e) {
-                System.out.println(e.getMessage());
+                System.out.println(e.getMessage()); //REMOVE
             }
         }
         return list;

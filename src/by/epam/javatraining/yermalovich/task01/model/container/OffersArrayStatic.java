@@ -32,18 +32,27 @@ public class OffersArrayStatic implements ActualOffer {
         }
     }
 
+    public OffersArrayStatic(ActualOffer another) {
+        if (another != null) {
+            lastUsedIndex = another.getArray().length - 1;
+            array = Arrays.copyOf(another.getArray(), another.getArray().length);
+        }
+    }
+
     public int getLastUsedIndex() {
         return lastUsedIndex;
     }
 
+    @Override
     public TouristTrip[] getArray() {
-        return array; //WRONG
-        //return new OffersArrayStatic(array);
+        return array;
     }
 
+    @Override
     public void setArray(TouristTrip[] array) {
         if (array != null) {
             this.array = array;
+            lastUsedIndex = array.length - 1;
         }
     }
 
@@ -80,8 +89,18 @@ public class OffersArrayStatic implements ActualOffer {
     }
 
     @Override
-    public int numberOfTours() {
+    public int size() {
         return lastUsedIndex + 1;
+    }
+
+    @Override
+    public void add(int index, TouristTrip tour) throws IncorrectArrayIndexException {
+        if (index > lastUsedIndex || index < 0) {
+            throw new IncorrectArrayIndexException("Index out of range.");
+        }
+        if (tour != null) {
+            array[index] = tour;
+        }
     }
 
     @Override
@@ -93,13 +112,8 @@ public class OffersArrayStatic implements ActualOffer {
     }
 
     @Override
-    public void add(int index, TouristTrip tour) throws IncorrectArrayIndexException {
-        if (index > lastUsedIndex || index < 0) {
-            throw new IncorrectArrayIndexException("Index out of range.");
-        }
-        if (tour != null) {
-            array[index] = tour;
-        }
+    public boolean isEmpty() {
+        return (lastUsedIndex == -1);
     }
 
     @Override
