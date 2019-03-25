@@ -50,6 +50,6 @@ public class FamilyTrip extends GroupTrip{
     public String toString() {
         return
                 super.toString() +
-                        "speacialOffer=" + specialOffer;
+                        ", speacialOffer=" + specialOffer;
     }
 }
