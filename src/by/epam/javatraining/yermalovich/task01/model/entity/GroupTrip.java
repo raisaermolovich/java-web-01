@@ -75,7 +75,7 @@ public class GroupTrip extends TouristTrip {
     public String toString() {
         return
                 super.toString() +
-                "minNumberOfPeople=" + minNumberOfPeople +
+                ", minNumberOfPeople=" + minNumberOfPeople +
                 ", maxNumberOfPeople=" + maxNumberOfPeople;
     }
 }

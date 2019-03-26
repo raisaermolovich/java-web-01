@@ -13,6 +13,7 @@ public class Vacation extends IndividualTrip {
 
     public Vacation(int days, Transport transport, Meal meals, String destination) {
         super(days, transport, meals, destination);
+        description = "No description";
     }
 
 
@@ -56,6 +57,6 @@ public class Vacation extends IndividualTrip {
         return "Vacation{" +
                 super.toString() +
                 ", description=" + getDescription() +
-                '}';
+                "}";
     }
 }

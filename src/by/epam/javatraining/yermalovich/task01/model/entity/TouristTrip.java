@@ -13,7 +13,7 @@ public class TouristTrip {
         days = 0;
         transport = Transport.NO_TRANSPORT;
         meals = Meal.NO_MEAL;
-        destination = "Not specified.";
+        destination = "Not specified";
     }
 
     public TouristTrip(int days, Transport transport, Meal meals, String destination) {
@@ -23,7 +23,7 @@ public class TouristTrip {
         }
         this.transport = transport;
         this.meals = meals;
-        this.destination = "Not specified.";
+        this.destination = "Not specified";
         if (destination != null) {
             this.destination = destination;
         }

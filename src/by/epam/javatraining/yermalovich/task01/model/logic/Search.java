@@ -10,9 +10,9 @@ import by.epam.javatraining.yermalovich.task01.model.exception.*;
 
 public class Search {
 
-    public static ActualOffer searchByDays(ActualOffer list, int a, int b) throws InvalidSearchParametersOrderException {
+    public static ActualOffer searchByDays(ActualOffer list, int min, int max) throws InvalidSearchParametersOrderException {
 
-        if (a > b) {
+        if (min > max) {
             throw new InvalidSearchParametersOrderException("Invalid number range");
         }
 
@@ -20,14 +20,14 @@ public class Search {
         if (list != null) {
             try {
                 for (int i = 0; i < list.size(); i++) {
-                    if (list.get(i).getDays() >= a && list.get(i).getDays() <= b) {
+                    if (list.get(i).getDays() >= min && list.get(i).getDays() <= max) {
                         foundList.addTour(list.get(i));
                     }
                 }
             } catch (IncorrectArrayIndexException e) {
-                System.out.println(e.getMessage());
+                //LOG  System.out.println(e.getMessage());
             } catch (ArrayOverflowException e) {
-                System.out.println(e.getMessage());
+                //LOG  System.out.println(e.getMessage());
             }
         }
         return foundList;
@@ -45,9 +45,9 @@ public class Search {
                     }
                 }
             } catch (IncorrectArrayIndexException e) {
-                System.out.println(e.getMessage());
+                //LOG  System.out.println(e.getMessage());
             } catch (ArrayOverflowException e) {
-                System.out.println(e.getMessage());
+                //LOG  System.out.println(e.getMessage());
             }
         }
         return foundList;
@@ -65,9 +65,9 @@ public class Search {
                     }
                 }
             } catch (IncorrectArrayIndexException e) {
-                System.out.println(e.getMessage());
+                //LOG  System.out.println(e.getMessage());
             } catch (ArrayOverflowException e) {
-                System.out.println(e.getMessage());
+                //LOG  System.out.println(e.getMessage());
             }
         }
         return foundList;
@@ -85,18 +85,19 @@ public class Search {
                     }
                 }
             } catch (IncorrectArrayIndexException e) {
-                System.out.println(e.getMessage());
+                //LOG  System.out.println(e.getMessage());
             } catch (ArrayOverflowException e) {
-                System.out.println(e.getMessage());
+                //LOG  System.out.println(e.getMessage());
             }
         }
         return foundList;
     }
 
 
-    public static ActualOffer searchByPeopleNumber(ActualOffer list, int a, int b) throws InvalidSearchParametersOrderException {
+    public static ActualOffer searchByPeopleNumber(ActualOffer list, int min, int max)
+            throws InvalidSearchParametersOrderException {
 
-        if (a > b) {
+        if (min > max) {
             throw new InvalidSearchParametersOrderException("Invalid number range");
         }
 
@@ -106,8 +107,8 @@ public class Search {
                 for (int i = 0; i < list.size(); i++) {
                     if (list.get(i) instanceof GroupTrip) {
 
-                        if (((GroupTrip) list.get(i)).getMinNumberOfPeople() <= b
-                                && ((GroupTrip) list.get(i)).getMaxNumberOfPeople() >= a) {
+                        if (((GroupTrip) list.get(i)).getMinNumberOfPeople() <= max
+                                && ((GroupTrip) list.get(i)).getMaxNumberOfPeople() >= min) {
                             foundList.addTour(list.get(i));
                         }
                     }

@@ -89,6 +89,9 @@ public class Main {
             System.out.println(e);
         }
 
+        System.out.println("Sorted by Destination Asc: " + Sorter.sortByDestinationAsc(list));
+
+        System.out.println("Sorted by Destination Desc: " + Sorter.sortByDestinationDesc(list));
 
     }
 }

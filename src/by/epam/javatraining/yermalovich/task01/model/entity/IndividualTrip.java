@@ -44,6 +44,6 @@ public class IndividualTrip extends TouristTrip {
     @Override
     public String toString() {
         return  super.toString() +
-                "numberOfPeople=" + numberOfPeople;
+                ", numberOfPeople=" + numberOfPeople;
     }
 }

@@ -48,8 +48,9 @@ public class FamilyTrip extends GroupTrip{
 
     @Override
     public String toString() {
-        return
+        return "FamilyTrip{" +
                 super.toString() +
-                        ", speacialOffer=" + specialOffer;
+                ", speacialOffer=" + specialOffer +
+                "}";
     }
 }
