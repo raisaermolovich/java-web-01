@@ -12,6 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class SorterTest {
 
     private ActualOffer list;
+
     private TouristTrip firstTour;
     private TouristTrip secondTour;
     private TouristTrip thirdTour;
@@ -51,6 +52,47 @@ public class SorterTest {
         expectedList.addTour(secondTour);
 
         ActualOffer sortedList = Sorter.sortByDaysAsc(list);
+        assertEquals(expectedList, sortedList);
+    }
+
+    @Test
+    public void testSortByDaysDesc() throws ArrayOverflowException{
+        ActualOffer expectedList = new OffersArray();
+        expectedList.addTour(secondTour);
+        expectedList.addTour(thirdTour);
+        expectedList.addTour(fourthTour);
+        expectedList.addTour(sixthTour);
+        expectedList.addTour(fifthTour);
+        expectedList.addTour(firstTour);
+
+        ActualOffer sortedList = Sorter.sortByDaysDesc(list);
+        assertEquals(expectedList, sortedList);
+    }
+
+    @Test
+    public void testSortByDestinationAsc() throws ArrayOverflowException{
+        ActualOffer expectedList = new OffersArray();
+        expectedList.addTour(sixthTour);
+        expectedList.addTour(thirdTour);
+        expectedList.addTour(secondTour);
+        expectedList.addTour(firstTour);
+        expectedList.addTour(fourthTour);
+        expectedList.addTour(fifthTour);
+        ActualOffer sortedList = Sorter.sortByDestinationAsc(list);
+        assertEquals(expectedList, sortedList);
+    }
+
+    @Test
+    public void testSortByDestinationDesc() throws ArrayOverflowException{
+        ActualOffer expectedList = new OffersArray();
+        expectedList.addTour(fifthTour);
+        expectedList.addTour(fourthTour);
+        expectedList.addTour(firstTour);
+        expectedList.addTour(secondTour);
+        expectedList.addTour(thirdTour);
+        expectedList.addTour(sixthTour);
+
+        ActualOffer sortedList = Sorter.sortByDestinationDesc(list);
         assertEquals(expectedList, sortedList);
     }
 }
