@@ -2,7 +2,6 @@ package by.epam.javatraining.yermalovich.task01.model.container;
 
 import by.epam.javatraining.yermalovich.task01.model.entity.TouristTrip;
 import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectArrayIndexException;
-import by.epam.javatraining.yermalovich.task01.model.comparator.TripComparator;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -66,11 +65,10 @@ public class OffersArray implements ActualOffer {
     @Override
     public void removeTour(TouristTrip tour) {
         if (tour != null) {
-            TripComparator comparator = new TripComparator();
             int matches = 0;
 
             for (int i = 0; i < array.length; i++) {
-                if (comparator.compare(array[i], tour) == 0) {
+                if (array[i].equals(tour)) {
                     matches++;
                 }
             }
@@ -79,7 +77,7 @@ public class OffersArray implements ActualOffer {
             TouristTrip[] tmpArray = new TouristTrip[lastIndex + 1];
             int j = 0;
             for (int i = 0; i < array.length; i++) {
-                if (comparator.compare(array[i], tour) == 0) {
+                if (array[i].equals(tour)) {
                     continue;
                 }
                 tmpArray[j++] = array[i];

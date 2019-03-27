@@ -10,7 +10,8 @@ import by.epam.javatraining.yermalovich.task01.model.exception.*;
 
 public class Search {
 
-    public static ActualOffer searchByDays(ActualOffer list, int min, int max) throws InvalidSearchParametersOrderException {
+    public static ActualOffer searchByDays(ActualOffer list, int min, int max)
+            throws InvalidSearchParametersOrderException {
 
         if (min > max) {
             throw new InvalidSearchParametersOrderException("Invalid number range");

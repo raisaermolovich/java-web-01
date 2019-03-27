@@ -47,8 +47,8 @@ public class Main {
 
 
         /*//TripComparator CHECK
-        TripComparator comparator = new TripComparator();
-        System.out.println("comparator: " + comparator.compare(v4, v4));*/
+        TripComparatorByDays comparator = new TripComparatorByDays();
+        System.out.println("comparator: " + v4.equals(v4));*/
 
         System.out.println("Sorted by Day Asc: " + Sorter.sortByDaysAsc(list));
 

@@ -2,7 +2,6 @@ package by.epam.javatraining.yermalovich.task01.util.creator;
 
 import by.epam.javatraining.yermalovich.task01.model.entity.*;
 
-//public class VacationCreator implements TripCreator {
 public class VacationCreator {
 
 
@@ -18,7 +17,6 @@ public class VacationCreator {
         return new Vacation(days, transport, meals, destination, description);
     }
 
-    //@Override
     public TouristTrip createTrip(Vacation another) {
         return new Vacation(another);
     }

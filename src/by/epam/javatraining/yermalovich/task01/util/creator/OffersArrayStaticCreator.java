@@ -14,9 +14,4 @@ public class OffersArrayStaticCreator {
     public ActualOffer createContainer(TouristTrip[] array){
         return new OffersArray(array);
     }
-
-    @Override
-    public String toString() {
-        return "OffersArrayStaticCreator";
-    }
 }

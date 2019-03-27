@@ -13,9 +13,4 @@ public class OffersArrayCreator implements ContainerCreator {
     public ActualOffer createContainer(TouristTrip[] array) {
         return new OffersArray(array);
     }
-
-    @Override
-    public String toString() {
-        return "OffersArrayCreator";
-    }
 }

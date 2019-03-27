@@ -1,6 +1,6 @@
 package by.epam.javatraining.yermalovich.task01.model.container;
 
-import by.epam.javatraining.yermalovich.task01.model.comparator.TripComparator;
+import by.epam.javatraining.yermalovich.task01.comparator.TripComparatorByDays;
 import by.epam.javatraining.yermalovich.task01.model.entity.TouristTrip;
 import by.epam.javatraining.yermalovich.task01.model.exception.ArrayOverflowException;
 import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectArrayIndexException;
@@ -70,10 +70,9 @@ public class OffersArrayStatic implements ActualOffer {
     @Override
     public void removeTour(TouristTrip tour) {
         if (tour != null) {
-            TripComparator comparator = new TripComparator();
 
             for (int i = 0, j = 0; j < array.length; i++, j++) {
-                if (comparator.compare(array[i], tour) == 0) {
+                if (array[i].equals(tour)) {
                     if (j != array.length - 1) {
                         array[i] = array[j+1];
                     } else {
