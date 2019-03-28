@@ -9,12 +9,13 @@ public class VacationCreator {
         return new Vacation();
     }
 
-    public TouristTrip createTrip(int days, Transport transport, Meal meals, String destination) {
-        return new Vacation(days, transport, meals, destination);
+    public TouristTrip createTrip(int days, Transport transport, Meal meals, String destination, double price) {
+        return new Vacation(days, transport, meals, destination, price);
     }
 
-    public TouristTrip createTrip(int days, Transport transport, Meal meals, String destination, String description) {
-        return new Vacation(days, transport, meals, destination, description);
+    public TouristTrip createTrip(int days, Transport transport, Meal meals, String destination, String description,
+                                  double price) {
+        return new Vacation(days, transport, meals, destination, description, price);
     }
 
     public TouristTrip createTrip(Vacation another) {

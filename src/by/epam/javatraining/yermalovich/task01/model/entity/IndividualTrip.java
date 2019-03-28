@@ -14,8 +14,8 @@ public class IndividualTrip extends TouristTrip {
         super();
     }
 
-    public IndividualTrip(int days, Transport transport, Meal meals, String destination) {
-        super(days, transport, meals, destination);
+    public IndividualTrip(int days, Transport transport, Meal meals, String destination, double price) {
+        super(days, transport, meals, destination, price);
     }
 
     public IndividualTrip(IndividualTrip another) {

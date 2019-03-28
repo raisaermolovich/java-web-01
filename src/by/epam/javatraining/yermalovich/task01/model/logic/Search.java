@@ -94,6 +94,33 @@ public class Search {
         return foundList;
     }
 
+    public static ActualOffer searchByPrice(ActualOffer list, int min, int max)
+            throws InvalidSearchParametersOrderException {
+
+        if (min > max) {
+            throw new InvalidSearchParametersOrderException("Invalid number range");
+        }
+
+        ActualOffer foundList = new OffersArray();
+        if (list != null) {
+            try {
+                for (int i = 0; i < list.size(); i++) {
+                    if (list.get(i).getPrice() >= min && list.get(i).getPrice() <= max) {
+                        foundList.addTour(list.get(i));
+                    }
+                }
+            } catch (IncorrectArrayIndexException e) {
+                //LOG  System.out.println(e.getMessage());
+            } catch (ArrayOverflowException e) {
+                //LOG  System.out.println(e.getMessage());
+            }
+        }
+        return foundList;
+    }
+
+
+
+
 
     public static ActualOffer searchByPeopleNumber(ActualOffer list, int min, int max)
             throws InvalidSearchParametersOrderException {

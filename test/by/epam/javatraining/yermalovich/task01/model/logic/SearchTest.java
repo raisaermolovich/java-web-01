@@ -26,13 +26,13 @@ public class SearchTest {
         list = new OffersArray();
 
         firstTour = new Vacation();
-        secondTour = new Vacation(10, Transport.BUS, Meal.ALL_INCLUSIVE, "Greece");
-        thirdTour = new Vacation(20, Transport.TRAIN, Meal.ONE_TIME, "France");
-        fourthTour = new Vacation(15, Transport.NO_TRANSPORT, Meal.TWO_TIMES, "Spain");
-        fifthTour = new FamilyTrip(3, Transport.TRAIN, Meal.THREE_TIMES, "Ukraine",
+        secondTour = new Vacation(10, Transport.BUS, Meal.ALL_INCLUSIVE, "Greece", 150);
+        thirdTour = new Vacation(20, Transport.TRAIN, Meal.ONE_TIME, "France", 200);
+        fourthTour = new Vacation(15, Transport.NO_TRANSPORT, Meal.TWO_TIMES, "Spain", 250);
+        fifthTour = new FamilyTrip(3, Transport.TRAIN, Meal.THREE_TIMES, "Ukraine", 300,
                 3, 5, true);
-        sixthTour = new FamilyTrip(7, Transport.BUS, Meal.ALL_INCLUSIVE, "Bulgaria",
-                2, 5, true);
+        sixthTour = new FamilyTrip(7, Transport.BUS, Meal.ALL_INCLUSIVE, "Bulgaria", 350,
+                2, 5, false);
 
         list.addTour(firstTour);
         list.addTour(secondTour);
@@ -148,6 +148,49 @@ public class SearchTest {
         assertEquals(expectedList, sortedList);
     }
 
+    @Test
+    public void testValidSearchByPrice() throws ArrayOverflowException, InvalidSearchParametersOrderException {
+        ActualOffer expectedList = new OffersArray();
+        expectedList.addTour(thirdTour);
+        expectedList.addTour(fourthTour);
+        expectedList.addTour(fifthTour);
+
+        ActualOffer sortedList = Search.searchByPrice(list, 200, 300);
+        assertEquals(expectedList, sortedList);
+    }
+
+    @Test
+    public void testValidSearchByEqualsPrice() throws ArrayOverflowException, InvalidSearchParametersOrderException {
+        ActualOffer expectedList = new OffersArray();
+        expectedList.addTour(secondTour);
+
+        ActualOffer sortedList = Search.searchByPrice(list, 150, 150);
+        assertEquals(expectedList, sortedList);
+    }
+
+    @Test
+    public void testEmptySearchByPrice() throws ArrayOverflowException, InvalidSearchParametersOrderException {
+        ActualOffer expectedList = new OffersArray();
+
+        ActualOffer sortedList = Search.searchByPrice(list, 10, 15);
+        assertEquals(expectedList, sortedList);
+    }
+
+    @Test (expected = InvalidSearchParametersOrderException.class)
+    public void testInvalidSearchByPrice() throws ArrayOverflowException, InvalidSearchParametersOrderException {
+
+        ActualOffer sortedList = Search.searchByPrice(list, 300, 200);
+    }
+
+    @Test
+    public void testInvalidSearchWithNullListByPrice() throws ArrayOverflowException,
+            InvalidSearchParametersOrderException {
+        ActualOffer expectedList = new OffersArray();
+        list = null;
+
+        ActualOffer sortedList = Search.searchByPrice(list, 100, 200);
+        assertEquals(expectedList, sortedList);
+    }
 
     @Test
     public void testValidSearchBySpecialOffer() throws ArrayOverflowException, InvalidSearchParametersOrderException {
@@ -161,6 +204,7 @@ public class SearchTest {
     @Test
     public void testValidEmptySearchBySpecialOffer() throws ArrayOverflowException, InvalidSearchParametersOrderException {
         ActualOffer expectedList = new OffersArray();
+        expectedList.addTour(sixthTour);
 
         ActualOffer sortedList = Search.searchBySpecialOffer(list, false);
         assertEquals(expectedList, sortedList);

@@ -28,12 +28,12 @@ public class OffersArrayTest {
         list = new OffersArray();
 
         firstTour = new Vacation();
-        secondTour = new Vacation(10, Transport.BUS, Meal.ALL_INCLUSIVE, "Greece");
-        thirdTour = new Vacation(20, Transport.TRAIN, Meal.ONE_TIME, "France");
-        fourthTour = new Vacation(15, Transport.NO_TRANSPORT, Meal.TWO_TIMES, "Spain");
-        fifthTour = new FamilyTrip(3, Transport.TRAIN, Meal.THREE_TIMES, "Ukraine",
+        secondTour = new Vacation(10, Transport.BUS, Meal.ALL_INCLUSIVE, "Greece", 150);
+        thirdTour = new Vacation(20, Transport.TRAIN, Meal.ONE_TIME, "France", 200);
+        fourthTour = new Vacation(15, Transport.NO_TRANSPORT, Meal.TWO_TIMES, "Spain", 250);
+        fifthTour = new FamilyTrip(3, Transport.TRAIN, Meal.THREE_TIMES, "Ukraine", 300,
                 3, 5, true);
-        sixthTour = new FamilyTrip(7, Transport.BUS, Meal.ALL_INCLUSIVE, "Bulgaria",
+        sixthTour = new FamilyTrip(7, Transport.BUS, Meal.ALL_INCLUSIVE, "Bulgaria", 350,
                 2, 5, true);
 
         list.addTour(firstTour);

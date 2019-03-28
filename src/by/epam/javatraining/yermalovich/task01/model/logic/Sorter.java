@@ -89,4 +89,46 @@ public class Sorter {
         }
         return list;
     }
+
+    public static ActualOffer sortByPriceAsc(ActualOffer list) { /////////
+        TouristTrip tmp;
+
+        if (list != null) {
+            try {
+                for (int j = 0; j < list.size() - 1; j++) {
+                    for (int i = 0; i < list.size() - 1; i++) {
+                        if (list.get(i).getPrice() > list.get(i + 1).getPrice()) {
+                            tmp = list.get(i);
+                            list.add(i, list.get(i + 1));
+                            list.add(i + 1, tmp);
+                        }
+                    }
+                }
+            } catch (IncorrectArrayIndexException e) {
+                //LOG System.out.println(e.getMessage()); //REMOVE
+            }
+        }
+        return list;
+    }
+
+    public static ActualOffer sortByPriceDesc(ActualOffer list) {
+        TouristTrip tmp;
+
+        if (list != null) {
+            try {
+                for (int j = 0; j < list.size() - 1; j++) {
+                    for (int i = 0; i < list.size() - 1; i++) {
+                        if (list.get(i).getPrice() < list.get(i + 1).getPrice()) {
+                            tmp = list.get(i);
+                            list.add(i, list.get(i + 1));
+                            list.add(i + 1, tmp);
+                        }
+                    }
+                }
+            } catch (IncorrectArrayIndexException e) {
+                //LOG    System.out.println(e.getMessage());
+            }
+        }
+        return list;
+    }
 }

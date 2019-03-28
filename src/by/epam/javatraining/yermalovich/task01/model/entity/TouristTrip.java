@@ -8,15 +8,17 @@ public class TouristTrip {
     private Transport transport;
     private Meal meals;
     private String destination;
+    private double price;
 
     public TouristTrip() {
         days = 0;
         transport = Transport.NO_TRANSPORT;
         meals = Meal.NO_MEAL;
         destination = "Not specified";
+        price = 0;
     }
 
-    public TouristTrip(int days, Transport transport, Meal meals, String destination) {
+    public TouristTrip(int days, Transport transport, Meal meals, String destination, double price) {
         this.days = 0;
         if (days > 0) {
             this.days = days;
@@ -27,6 +29,10 @@ public class TouristTrip {
         if (destination != null) {
             this.destination = destination;
         }
+        this.price = 0;
+        if (price > 0) {
+            this.price = price;
+        }
     }
 
     public TouristTrip (TouristTrip another) {
@@ -36,6 +42,7 @@ public class TouristTrip {
             this.transport = another.getTransport();
             this.meals = another.getMeals();
             this.destination = another.getDestination();
+            this.price = price;
         }
     }
 
@@ -75,12 +82,23 @@ public class TouristTrip {
         }
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        if (price >= 0) {
+            this.price = price;
+        }
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TouristTrip that = (TouristTrip) o;
         return days == that.days &&
+                Double.compare(that.price, price) == 0 &&
                 transport == that.transport &&
                 meals == that.meals &&
                 Objects.equals(destination, that.destination);
@@ -89,7 +107,7 @@ public class TouristTrip {
     @Override
     public int hashCode() {
 
-        return Objects.hash(days, transport, meals, destination);
+        return Objects.hash(days, transport, meals, destination, price);
     }
 
     @Override
@@ -97,6 +115,7 @@ public class TouristTrip {
         return  "days=" + days +
                 ", transport=" + transport +
                 ", meals=" + meals +
+                ", price=" + price +
                 ", destination=" + destination;
     }
 }

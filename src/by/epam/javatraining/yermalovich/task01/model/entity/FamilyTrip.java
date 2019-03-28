@@ -11,9 +11,9 @@ public class FamilyTrip extends GroupTrip{
         specialOffer = false;
     }
 
-    public FamilyTrip(int days, Transport transport, Meal meals, String destination, int minNumberOfPeople,
-                     int maxNumberOfPeople, boolean speacialOffer) {
-        super(days, transport, meals, destination, minNumberOfPeople, maxNumberOfPeople);
+    public FamilyTrip(int days, Transport transport, Meal meals, String destination, double price,
+                      int minNumberOfPeople, int maxNumberOfPeople, boolean speacialOffer) {
+        super(days, transport, meals, destination, price, minNumberOfPeople, maxNumberOfPeople);
         this.specialOffer = speacialOffer;
     }
 

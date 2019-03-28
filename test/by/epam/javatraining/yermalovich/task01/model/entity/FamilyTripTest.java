@@ -12,8 +12,8 @@ public class FamilyTripTest {
 
     @Before
     public void setUp(){
-        firstTour = new FamilyTrip (7, Transport.BUS, Meal.NO_MEAL, "Greece", 3,
-                5, true);
+        firstTour = new FamilyTrip (7, Transport.BUS, Meal.NO_MEAL, "Greece", 500,
+                3, 5, true);
     }
 
     @Test
@@ -52,6 +52,23 @@ public class FamilyTripTest {
     public void setMeals() {
         firstTour.setMeals(Meal.ALL_INCLUSIVE);
         assertEquals(Meal.ALL_INCLUSIVE, firstTour.getMeals());
+    }
+
+    @Test
+    public void getPrice() {
+        assertEquals(500, firstTour.getPrice(), 0.01);
+    }
+
+    @Test
+    public void setPrice() {
+        firstTour.setPrice(0);
+        assertEquals(0, firstTour.getPrice(), 0.01);
+    }
+
+    @Test
+    public void setIncorrectPrice() {
+        firstTour.setDays(-5);
+        assertEquals(500, firstTour.getPrice(), 0.01);
     }
 
     @Test

@@ -11,14 +11,15 @@ public class Vacation extends IndividualTrip {
         description = "No description";
     }
 
-    public Vacation(int days, Transport transport, Meal meals, String destination) {
-        super(days, transport, meals, destination);
+    public Vacation(int days, Transport transport, Meal meals, String destination, double price) {
+        super(days, transport, meals, destination, price);
         description = "No description";
     }
 
 
-    public Vacation(int days, Transport transport, Meal meals, String destination, String description) {
-        super(days, transport, meals, destination);
+    public Vacation(int days, Transport transport, Meal meals, String destination, String description,
+                    double price) {
+        super(days, transport, meals, destination, price);
         this.description = description;
     }
 

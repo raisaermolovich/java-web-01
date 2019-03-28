@@ -1,6 +1,5 @@
 package by.epam.javatraining.yermalovich.task01.model.container;
 
-import by.epam.javatraining.yermalovich.task01.comparator.TripComparatorByDays;
 import by.epam.javatraining.yermalovich.task01.model.entity.TouristTrip;
 import by.epam.javatraining.yermalovich.task01.model.exception.ArrayOverflowException;
 import by.epam.javatraining.yermalovich.task01.model.exception.IncorrectArrayIndexException;

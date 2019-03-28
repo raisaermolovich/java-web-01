@@ -25,12 +25,12 @@ public class SorterTest {
         list = new OffersArray();
 
         firstTour = new Vacation();
-        secondTour = new Vacation(30, Transport.BUS, Meal.ALL_INCLUSIVE, "Greece");
-        thirdTour = new Vacation(20, Transport.TRAIN, Meal.ONE_TIME, "France");
-        fourthTour = new Vacation(15, Transport.NO_TRANSPORT, Meal.TWO_TIMES, "Spain");
-        fifthTour = new FamilyTrip(3, Transport.TRAIN, Meal.THREE_TIMES, "Ukraine",
+        secondTour = new Vacation(30, Transport.BUS, Meal.ALL_INCLUSIVE, "Greece", 1500);
+        thirdTour = new Vacation(20, Transport.TRAIN, Meal.ONE_TIME, "France", 20);
+        fourthTour = new Vacation(15, Transport.NO_TRANSPORT, Meal.TWO_TIMES, "Spain", 250);
+        fifthTour = new FamilyTrip(3, Transport.TRAIN, Meal.THREE_TIMES, "Ukraine", 300,
                 3, 5, true);
-        sixthTour = new FamilyTrip(7, Transport.PLANE, Meal.ALL_INCLUSIVE, "Bulgaria",
+        sixthTour = new FamilyTrip(7, Transport.PLANE, Meal.ALL_INCLUSIVE, "Bulgaria", 700,
                 2, 5, false);
 
         list.addTour(firstTour);
@@ -93,6 +93,34 @@ public class SorterTest {
         expectedList.addTour(sixthTour);
 
         ActualOffer sortedList = Sorter.sortByDestinationDesc(list);
+        assertEquals(expectedList, sortedList);
+    }
+
+    @Test
+    public void testSortByPriceAsc() throws ArrayOverflowException{
+        ActualOffer expectedList = new OffersArray();
+        expectedList.addTour(firstTour);
+        expectedList.addTour(thirdTour);
+        expectedList.addTour(fourthTour);
+        expectedList.addTour(fifthTour);
+        expectedList.addTour(sixthTour);
+        expectedList.addTour(secondTour);
+
+        ActualOffer sortedList = Sorter.sortByPriceAsc(list);
+        assertEquals(expectedList, sortedList);
+    }
+
+    @Test
+    public void testSortByPriceDesc() throws ArrayOverflowException{
+        ActualOffer expectedList = new OffersArray();
+        expectedList.addTour(secondTour);
+        expectedList.addTour(sixthTour);
+        expectedList.addTour(fifthTour);
+        expectedList.addTour(fourthTour);
+        expectedList.addTour(thirdTour);
+        expectedList.addTour(firstTour);
+
+        ActualOffer sortedList = Sorter.sortByPriceDesc(list);
         assertEquals(expectedList, sortedList);
     }
 }

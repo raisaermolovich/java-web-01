@@ -14,9 +14,9 @@ public class GroupTrip extends TouristTrip {
         super();
     }
 
-    public GroupTrip(int days, Transport transport, Meal meals, String destination, int minNumberOfPeople,
+    public GroupTrip(int days, Transport transport, Meal meals, String destination, double price, int minNumberOfPeople,
                      int maxNumberOfPeople) {
-        super(days, transport, meals, destination);
+        super(days, transport, meals, destination, price);
         if (minNumberOfPeople > 0) {
             this.minNumberOfPeople = minNumberOfPeople;
         }
